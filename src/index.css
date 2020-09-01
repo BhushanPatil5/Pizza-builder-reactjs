@@ -1,0 +1,266 @@
+/*		     				
+	
+	PIZZA APP - v1 with CSS3 styles only. 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+/*  Basic styling 
+	============================================================= */
+html,
+body {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  /* Renders text clean */
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden; /* when media 500px or less, text overflows screen */
+}
+
+section {
+  padding: 60px 0px;
+}
+
+/* Links
+   ===================================*/
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  padding-bottom: 1px;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+/* Button Normal State 
+   ====================================*/
+.btn:link,
+.btn:visited,
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: inherit;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  border: 2px solid #e67e22;
+  /* Transition the background, color, border by 0.2s*/
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type="submit"] {
+  background-color: #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  color: #e67e22;
+}
+
+/* Button Hover state, and clicked state
+   ========================================*/
+.btn:hover,
+.btn:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  border: 2px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  color: #fff;
+  border: 2px solid #cf6d17;
+}
+
+
+/* Header styles
+   ==========================================*/
+   header {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./assets/images/pizza-baner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* 100% of the viewport's height */
+    background-attachment: fixed;
+  }
+  
+  .hero-text-box {
+    position: absolute; /* We want to vertically & horizontally center content */
+    width: auto;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /* Centers content half of width and height up to the top and left*/
+  }
+  
+  .hero-text-box h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+  }
+
+
+  /* Big tablet - 1024px - 1200px
+*****************************************/
+
+@media only screen and (max-width: 1200px) {
+	.hero-text{
+		width: 100%;
+		padding: 0 2%;
+	}
+}
+
+
+
+/* Tablets - 768px - 1023px
+*****************************************/
+
+@media only screen and (max-width: 1023px) {
+	body {
+		font-size: 18px;
+	}
+	section {
+		padding: 60px 0;
+	}
+}
+
+
+/* Small phones/ tablets - 481px - 767px
+*****************************************/
+
+@media only screen and (max-width: 767px) {
+	body{
+		font-size: 16px;
+	}
+	section {
+		padding: 30px 0;
+	}
+	.hero-text {
+		padding: 0 4%;
+  }
+  
+	h1 {
+		font-size: 1.8em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+}
+
+/* Jumbotron
+*****************************************/
+.lable-jumbotron {
+  background-color: #B12726;
+  text-transform: capitalize;
+  padding: 1rem;
+  width: 100%;
+  color: #fff;
+}
+
+/* radio btn card
+*****************************************/
+label {
+  width: 100%;
+  font-size: 1rem;
+}
+
+.card-input-element+.card {
+  height: calc(64px + 2*1rem);
+  color: var(--primary);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+
+.card-input-element+.card:hover {
+  cursor: pointer;
+}
+
+.card-input-element:checked+.card {
+  border: 2px solid var(--primary);
+  -webkit-transition: border .3s;
+  -o-transition: border .3s;
+  transition: border .3s;
+}
+
+.card-input-element:checked+.card::after {
+  content: '\e5ca';
+  color: #AFB8EA;
+  font-family: 'Material Icons';
+  font-size: 24px;
+  -webkit-animation-name: fadeInCheckbox;
+  animation-name: fadeInCheckbox;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@-webkit-keyframes fadeInCheckbox {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateZ(-20deg);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateZ(0deg);
+  }
+}
+
+@keyframes fadeInCheckbox {
+  from {
+    opacity: 0;
+    transform: rotateZ(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(0deg);
+  }
+}
+
+/* utility card
+*****************************************/
+
+.bg-card {
+  background-color: #F9F9F9;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+.table tr td {
+  text-transform: capitalize;
+}
+
