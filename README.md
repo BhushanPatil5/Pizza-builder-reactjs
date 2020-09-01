@@ -30,9 +30,6 @@ Folder Structure: -
 -- route.js
 -- utils.js
 
-The code should be well designed and easy to understand.
-Comments can be added as needed.
-
 App specifications:
 The app should allow the user to create his own pizza.
 Pizza cost will be calculated depending on the size, crust type and amount of extra toppings.
@@ -76,4 +73,8 @@ Note:- future release pending points needs to be done
 3. edit functionaliy
 4. add quantity after building pizza
 5. Suggetions are most welcome
+
+Download Video here
+https://drive.google.com/file/d/1nzNybXK-e6pqd4Oa76zE5ZDjg3oAcvoG/view?usp=drivesdk
+
 
